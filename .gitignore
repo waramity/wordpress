@@ -1,2 +1,4 @@
 wp-content/plugins/waramity/node_modules
 wp-content/plugins/waramity/yarn.lock
+wp-content/plugins/waramity/vendor
+wp-content/plugins/waramity/composer.lock
