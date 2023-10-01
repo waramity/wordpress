@@ -14,3 +14,18 @@
  * Text Domain:       my-basics-plugin
  * Domain Path:       /languages
  */
+
+ /**
+ * Bootstrap the plugin.
+ */
+require_once 'vendor/autoload.php';
+require_once untrailingslashit( plugin_dir_path( __FILE__ ) ) . '/inc/custom-functions.php';
+
+use Waramity\Plugin;
+
+if ( class_exists( 'Waramity\Plugin' ) ) {
+	$the_plugin = new Plugin();
+}
+
+register_activation_hook( __FILE__, [ $the_plugin, 'activate' ] );
+register_deactivation_hook( __FILE__, [ $the_plugin, 'deactivate' ] );
